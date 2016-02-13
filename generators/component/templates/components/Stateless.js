@@ -1,14 +1,13 @@
-'use strict';
+/* @flow */
 
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-require('<%= style.webpackPath %>');
+import classNames from 'classnames';
 
-let <%= component.className %> = (props) => (
-  <div className="<%= style.className %>">
-    Please edit <%= component.path %>/<%= component.fileName %> to update this component!
-  </div>
-);
+const <%= component.className %> = (props) => {
+  return (
+  );
+};
 
 <%= component.className %>.displayName = '<%= component.displayName %>';
 

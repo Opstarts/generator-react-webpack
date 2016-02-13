@@ -1,23 +1,27 @@
-'use strict';
+/* @flow */
+import React, { Component, PropTypes } from 'react';
 
-import React from 'react';
+import classNames from 'classnames';
 
-require('<%= style.webpackPath %>');
+class <%= component.className %> extends Component {
+  static propTypes = {
+  };
 
-class <%= component.className %> extends React.Component {
-  render() {
+  static defaultProps = {
+
+  };
+
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+    };
+  }
+
+  render() ?ReactElement {
     return (
-      <div className="<%= style.className %>">
-        Please edit <%= component.path %>/<%= component.fileName %> to update this component!
-      </div>
     );
   }
 }
-
-<%= component.className %>.displayName = '<%= component.displayName %>';
-
-// Uncomment properties you need
-// <%= component.className %>.propTypes = {};
-// <%= component.className %>.defaultProps = {};
 
 export default <%= component.className %>;

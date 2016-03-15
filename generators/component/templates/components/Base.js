@@ -18,7 +18,10 @@ class <%= component.className %> extends Component {
     };
   }
 
-  render() ?ReactElement {
+  state: {
+  };
+
+  render(): ?React.Element {
     return (
     );
   }

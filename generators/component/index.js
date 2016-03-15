@@ -33,12 +33,10 @@ module.exports = generator.Base.extend({
     );
 
     // Create the unit test
-    /*
     this.fs.copyTpl(
       this.templatePath('tests/Base.js'),
       this.destinationPath(settings.test.path + settings.test.fileName),
       settings
     );
-    */
   }
 });

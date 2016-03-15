@@ -11,7 +11,7 @@
       },
       {
         "name": "component",
-        "path": "src/components"
+        "path": "src"
       },
       {
         "name": "image",
@@ -27,11 +27,11 @@
       },
       {
         "name": "style",
-        "path": "src/styles"
+        "path": "styles"
       },
       {
         "name": "test",
-        "path": "test"
+        "path": "tests"
       },
       {
         "name": "dist",
@@ -96,6 +96,6 @@
         ]
       }
     ],
-    "default": "css"
+    "default": "stylus"
   }
 }

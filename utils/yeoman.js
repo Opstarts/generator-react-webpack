@@ -24,7 +24,7 @@ let getBaseDir = () => {
 let getAllSettingsFromComponentName = (componentName, style) => {
 
   if(!style) {
-    style = 'css';
+    style = 'stylus';
   }
 
   // Clean up the path and pull it to parts

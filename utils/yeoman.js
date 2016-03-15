@@ -48,23 +48,23 @@ let getAllSettingsFromComponentName = (componentName, style) => {
 
   let settings = {
     style: {
-      webpackPath: `styles/${componentPartPath}/${componentBaseName}${styleSettings.suffix}`,
+      webpackPath: `${componentPartPath}/${componentBaseName}${styleSettings.suffix}`,
       path: `${stylePaths.path}/${componentPartPath}/`,
       fileName: `${componentBaseName}${styleSettings.suffix}`,
       className: getComponentStyleName(componentBaseName),
       suffix: styleSettings.suffix
     },
     component: {
-      webpackPath: `components/${componentPartPath}/${componentBaseName}Component.js`,
+      webpackPath: `${componentPartPath}/${componentBaseName}.jsx`,
       path: `${componentPath.path}/${componentPartPath}/`,
-      fileName: `${componentBaseName}Component.js`,
-      className: `${componentBaseName}Component`,
-      displayName: `${componentFullName}Component`,
-      suffix: '.js'
+      fileName: `${componentBaseName}.jsx`,
+      className: `${componentBaseName}`,
+      displayName: `${componentFullName}`,
+      suffix: '.jsx'
     },
     test: {
       path: `${testPath.path}/components/${componentPartPath}/`,
-      fileName: `${componentBaseName}ComponentTest.js`
+      fileName: `${componentBaseName}-test.js`
     }
   };
 

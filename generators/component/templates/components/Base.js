@@ -5,6 +5,8 @@ import classNames from 'classnames';
 
 class <%= component.className %> extends Component {
   static propTypes = {
+    className: PropTypes.string,
+
   };
 
   static defaultProps = {
@@ -22,7 +24,13 @@ class <%= component.className %> extends Component {
   };
 
   render(): ?React.Element {
+    const {
+      className,
+    } = this.props;
+
     return (
+      <div className={classNames('', className)}>
+      </div>
     );
   }
 }

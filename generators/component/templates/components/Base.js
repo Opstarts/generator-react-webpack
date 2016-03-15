@@ -29,7 +29,7 @@ class <%= component.className %> extends Component {
     } = this.props;
 
     return (
-      <div className={classNames('', className)}>
+      <div className={classNames('<%= component.styleName %>', className)}>
       </div>
     );
   }

@@ -46,12 +46,14 @@ let getAllSettingsFromComponentName = (componentName, style) => {
   // Configure tests
   let testPath = configUtils.getChoiceByKey('path', 'test');
 
+  const styleName = getComponentStyleName(componentBaseName);
+
   let settings = {
     style: {
       webpackPath: `${componentPartPath}/${componentBaseName}${styleSettings.suffix}`,
       path: `${stylePaths.path}/${componentPartPath}/`,
       fileName: `${componentBaseName}${styleSettings.suffix}`,
-      className: getComponentStyleName(componentBaseName),
+      className: styleName,
       suffix: styleSettings.suffix
     },
     component: {
@@ -59,6 +61,7 @@ let getAllSettingsFromComponentName = (componentName, style) => {
       path: `${componentPath.path}/${componentPartPath}/`,
       fileName: `${componentBaseName}.jsx`,
       className: `${componentBaseName}`,
+      styleName: styleName,
       displayName: `${componentFullName}`,
       suffix: '.jsx'
     },
@@ -98,8 +101,10 @@ let getCleanedPathName = (path, suffix) => {
  * @return {String}
  */
 let getComponentStyleName = (path) => {
-  let fileName = path.split('/').pop().toLowerCase();
-  return _.slugify(_.humanize(fileName)) + '-component';
+  let fileName = path.split('/').pop();
+  let parts = fileName.split(/(?=[A-Z])/);
+
+  return `ops-${_.slugify(_.humanize(parts.join('-'))).toLowerCase()}`;
 };
 
 /**

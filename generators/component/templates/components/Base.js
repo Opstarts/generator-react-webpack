@@ -5,25 +5,22 @@ import classNames from 'classnames';
 
 export type Props = {
   className: ?string;
-}
+};
 
 type State = {
 };
 
 class <%= component.className %> extends Component {
-  static defaultProps = {
-
-  };
+  static defaultProps = { };
 
   constructor(props: any) {
     super(props);
-
-    this.state = {
-    };
   }
 
+  state: State = {
+  };
+
   props: Props;
-  state: State;
 
   render(): ?React.Element {
     const {

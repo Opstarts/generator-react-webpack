@@ -4,13 +4,13 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import <%= component.className %> from '../../src<%= component.webpackPath %>';
+import <%= component.className %> from '../../<%= test.relativePath %>src/<%= component.webpackPath %>';
 
-describe('<%= component.className %>', () => {
+describe('<<%= component.className %>>', () => {
   beforeEach(() => {
   });
 
-  it('renders with CSS class name <%= component.styleName %>', () => {
+  it('renders with CSS class name "<%= component.styleName %>"', () => {
     const component = shallow(<<%= component.className %> />);
     expect(component.is('.<%= component.styleName %>')).to.equal(true);
   });

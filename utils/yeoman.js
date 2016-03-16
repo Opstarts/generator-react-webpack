@@ -3,6 +3,7 @@
 let path = require('path');
 let configUtils = require('./config');
 let _ = require('underscore.string');
+let lodash = require('lodash');
 
 // Needed directory paths
 const baseName = path.basename(process.cwd());
@@ -45,13 +46,14 @@ let getAllSettingsFromComponentName = (componentName, style) => {
 
   // Configure tests
   let testPath = configUtils.getChoiceByKey('path', 'test');
+  let testRelativePath = lodash.range(componentParts.length).map(() => '..').join('/');
 
   const styleName = getComponentStyleName(componentBaseName);
 
   let settings = {
     style: {
       webpackPath: `${componentPartPath}/${componentBaseName}${styleSettings.suffix}`,
-      path: `${stylePaths.path}/${componentPartPath}/`,
+      path: `${stylePaths.path}/`,
       fileName: `${componentBaseName}${styleSettings.suffix}`,
       className: styleName,
       suffix: styleSettings.suffix
@@ -67,6 +69,7 @@ let getAllSettingsFromComponentName = (componentName, style) => {
     },
     test: {
       path: `${testPath.path}/components/${componentPartPath}/`,
+      relativePath: testRelativePath ? `${testRelativePath}/` : '',
       fileName: `${componentBaseName}-test.js`
     }
   };

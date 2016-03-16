@@ -17,10 +17,10 @@ class <%= component.className %> extends Component {
     super(props);
   }
 
+  props: Props;
+
   state: State = {
   };
-
-  props: Props;
 
   render(): ?React.Element {
     const {

@@ -1,14 +1,16 @@
 /* @flow */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import classNames from 'classnames';
 
+export type Props = {
+  className: ?string;
+}
+
+type State = {
+};
+
 class <%= component.className %> extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-
-  };
-
   static defaultProps = {
 
   };
@@ -20,8 +22,8 @@ class <%= component.className %> extends Component {
     };
   }
 
-  state: {
-  };
+  props: Props;
+  state: State;
 
   render(): ?React.Element {
     const {
@@ -29,7 +31,10 @@ class <%= component.className %> extends Component {
     } = this.props;
 
     return (
-      <div className={classNames('<%= component.styleName %>', className)}>
+      <div
+        className={classNames('<%= component.styleName %>', className)}
+      >
+
       </div>
     );
   }

@@ -27,7 +27,7 @@
       },
       {
         "name": "style",
-        "path": "styles"
+        "path": "../app/client/stylus/imports/react"
       },
       {
         "name": "test",

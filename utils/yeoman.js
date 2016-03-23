@@ -62,6 +62,7 @@ let getAllSettingsFromComponentName = (componentName, style) => {
       webpackPath: `${componentPartPath}/${componentBaseName}.jsx`,
       path: `${componentPath.path}/${componentPartPath}/`,
       fileName: `${componentBaseName}.jsx`,
+      fileNameContainer: `${componentBaseName}Container.jsx`,
       className: `${componentBaseName}`,
       styleName: styleName,
       displayName: `${componentFullName}`,

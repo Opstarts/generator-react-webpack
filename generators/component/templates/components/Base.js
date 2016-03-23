@@ -13,7 +13,7 @@ type State = {
 class <%= component.className %> extends Component {
   static defaultProps = { };
 
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
   }
 

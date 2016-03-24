@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 export type Props = {
-  className: ?string;
+  className?: string;
 };
 
 type State = {

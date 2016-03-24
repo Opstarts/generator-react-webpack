@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import <%= component.className %> from './<%= component.className %>';
 
 export type Props = {
-  className: ?string;
+  className?: string;
 };
 
 type State = {

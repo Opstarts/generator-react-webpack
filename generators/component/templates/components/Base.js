@@ -26,10 +26,11 @@ class <%= component.className %> extends Component {
     const {
       className,
     } = this.props;
+    const cx = classNames('<%= component.styleName %>', className);
 
     return (
       <div
-        className={classNames('<%= component.styleName %>', className)}
+        className={cx}
       >
 
       </div>

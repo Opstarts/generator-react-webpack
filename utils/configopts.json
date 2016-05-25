@@ -3,11 +3,11 @@
     "options": [
       {
         "name": "base",
-        "path": "src"
+        "path": "client/imports/ui/src"
       },
       {
         "name": "action",
-        "path": "src/actions"
+        "path": "client/imports/actions"
       },
       {
         "name": "component",
@@ -23,11 +23,11 @@
       },
       {
         "name": "store",
-        "path": "src/stores"
+        "path": "client/imports/stores"
       },
       {
         "name": "style",
-        "path": "../app/client/stylus/imports/react"
+        "path": "client/stylus/imports/react"
       },
       {
         "name": "test",

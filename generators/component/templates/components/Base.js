@@ -2,14 +2,14 @@
 import React, { Component } from 'react';
 
 import classNames from 'classnames';
+import autobind from 'autobind-decorator';
+import { observer } from 'mobx-react';
 
 export type Props = {
   className?: string;
 };
 
-type State = {
-};
-
+@observer
 class <%= component.className %> extends Component {
   static defaultProps = { };
 
@@ -18,9 +18,6 @@ class <%= component.className %> extends Component {
   }
 
   props: Props;
-
-  state: State = {
-  };
 
   render(): ?React.Element {
     const {

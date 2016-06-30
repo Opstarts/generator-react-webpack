@@ -1,5 +1,5 @@
 /* eslint-env node, mocha */
-/* eslint no-console: 0 */
+/* eslint no-console:0 react/jsx-closing-bracket-location:0 */
 import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';

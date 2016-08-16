@@ -3,12 +3,16 @@ import React, { Component } from 'react';
 
 import classNames from 'classnames';
 import autobind from 'autobind-decorator';
-import { observer } from 'mobx-react';
+import {
+  observer,
+  inject,
+} from 'mobx-react';
 
 export type Props = {
   className?: string;
 };
 
+@inject('')
 @observer
 class <%= component.className %> extends Component {
   static defaultProps = { };

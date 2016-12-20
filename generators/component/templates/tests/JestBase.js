@@ -4,7 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 // Bug in jest
-const <%= component.className %> = require('./<%= component.webpackPath %>').default;
+const <%= component.className %> = require('./<%= component.className %>').default;
 // import <%= component.className %> from './<%= component.webpackPath %>';
 
 it('<<%= component.className %>> renders', () => {

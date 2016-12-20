@@ -69,8 +69,9 @@ let getAllSettingsFromComponentName = (componentName, style) => {
       suffix: '.jsx'
     },
     test: {
-      path: `${componentPartPath}/`,
+      path: `${componentPath.path}/${componentPartPath}/`,
       relativePath: testRelativePath ? `${testRelativePath}/` : '',
+      className: `${componentBaseName}`,
       fileName: `${componentBaseName}.test.js`
     }
   };

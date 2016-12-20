@@ -13,6 +13,7 @@ export type Props = {
 };
 
 @inject('')
+@autobind
 @observer
 class <%= component.className %> extends Component {
   static defaultProps = { };

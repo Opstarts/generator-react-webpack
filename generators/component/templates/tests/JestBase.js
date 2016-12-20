@@ -7,14 +7,15 @@ import renderer from 'react-test-renderer';
 const <%= component.className %> = require('./<%= component.className %>').default;
 // import <%= component.className %> from './<%= component.webpackPath %>';
 
-it('<<%= component.className %>> renders', () => {
-  const component = renderer.create(
-    <<%= component.className %>
+describe('<<%= component.className %>>', function() {
+  it('renders', function() {
+    const component = renderer.create(
+      <<%= component.className %>
 
-    />
-  );
+      />
+    );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
-

@@ -1,11 +1,9 @@
 /* eslint-env expect, jest */
-/* eslint no-console:0 react/jsx-closing-bracket-location:0 */
+/* eslint no-console:0, react/jsx-closing-bracket-location:0, global-require:0 */
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-// Bug in jest
-const <%= component.className %> = require('./<%= component.className %>').default;
-// import <%= component.className %> from './<%= component.webpackPath %>';
+import <%= component.className %> from './<%= component.className %>';
 
 describe('<<%= component.className %>>', function() {
   it('renders', function() {

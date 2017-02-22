@@ -4,13 +4,16 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import <%= component.className %> from './<%= component.className %>';
+import OpstartsThemeProvider from '<%= test.relativePath %>theme';
 
 describe('<<%= component.className %>>', function() {
   it('renders', function() {
     const component = renderer.create(
-      <<%= component.className %>
+      <OpstartsThemeProvider>
+        <<%= component.className %>
 
-      />
+        />
+      </OpstartsThemeProvider>
     );
 
     const tree = component.toJSON();

@@ -45,8 +45,7 @@ let getAllSettingsFromComponentName = (componentName, style) => {
   let componentPath = configUtils.getChoiceByKey('path', 'component');
 
   // Configure tests
-  let testPath = configUtils.getChoiceByKey('path', 'test');
-  let testRelativePath = lodash.range(componentParts.length).map(() => '..').join('/');
+  let testRelativePath = path.relative(`/${componentPartPath}`, '/');
 
   const styleName = getComponentStyleName(componentBaseName);
 

@@ -24,7 +24,7 @@ class <%= component.className %> extends Component {
 
   props: Props;
 
-  render(): ?React.Element {
+  render() {
     const {
       className,
     } = this.props;

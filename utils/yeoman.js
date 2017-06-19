@@ -69,7 +69,7 @@ let getAllSettingsFromComponentName = (componentName, style) => {
     },
     test: {
       path: `${componentPath.path}/${componentPartPath}/`,
-      relativePath: testRelativePath ? `${testRelativePath}/` : '',
+      relativePath: testRelativePath ? `${testRelativePath}/` : './',
       className: `${componentBaseName}`,
       fileName: `${componentBaseName}.test.js`
     }
